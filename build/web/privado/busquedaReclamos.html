@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Buscar reclamo</title>
+        <meta charset="UTF-8">
+        <link href="../publico/css/themes/bigbox.css" rel="stylesheet"/>
+        <link href="../publico/css/normalize.css" rel="stylesheet"/>
+        <link href="../publico/css/pure.css" rel="stylesheet" />
+        <link href="../publico/css/stylePrincipalGrid.css" rel="stylesheet" />
+        <link href="../publico/css/informe.css" rel="stylesheet" />
+        <link href="../publico/css/informe_print.css" rel="stylesheet" media="print" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+
+    <body> 
+
+
+        <div class="grid-container">
+
+            <div class="header">
+                <nav class="flexContainer">
+                    <ul class="nav flexItem flexStart">
+                        <li><a href="#">
+                                <img src="../img/wega-logoOld.png" alt="Logo Wega" id="logo"/>
+                            </a></li>
+                    </ul>
+                    <ul class="nav flexContainer flexEnd">
+                        <li><a href="principal.html" id="menu">MENU</a></li>
+                        <!--li><a href="">Productos</a></li>
+                        <li><a href="informes.html">Informes</a></li -->
+
+                    </ul>
+                </nav>
+            </div>
+            <div id="wrapperSearch" class="left">
+                <h2>Buscar reclamo</h2>
+                <div class="switch">
+                    <input name="switch" id="one" type="radio" checked/>
+                    <label for="one" class="switch__label">Cliente</label>
+                    <input name="switch" id="two" type="radio" />
+                    <label for="two" class="switch__label">Proveedor</label>
+                    <input name="switch" id="three" type="radio" />
+                    <label for="three" class="switch__label"  >Producto</label>
+                    <div class="switch__indicator"></div>
+                </div>
+
+                <div class="flex-containerCliente pure-form">
+
+                    <div class="flex leftC">
+                        <input type="hidden" id="optSelected" />
+
+                        <div id="pnlCliente">
+                            <label>Seleccione Cliente:</label>
+                            <input type="hidden" name="cliente_id" id="cliente_id" value=""/>
+                            <input type="hidden" name="cliente" id="cliente"/>
+                            <div id="inputSelectCliente">
+                                <input list="clie" name="clie" id="clie_id"/> 
+                            </div>
+                        </div>
+
+                        <div id="pnlProveedor">
+                            <label>Seleccione Proveedor:</label>
+                            <input type="hidden" name="id_proveedor" id="id_proveedor"/>
+                            <span id="inputSelectProveedor"></span>
+                        </div>
+
+                        <div id="pnlProducto">
+                            <label>Seleccione Producto:</label>
+                            <input type="hidden" name="producto_id" id="producto_id" value="">
+                            <input type="hidden" name="producto" id="producto" />
+                            <span id="inputSelectProducto"></span>
+                        </div>
+
+
+                    </div>
+                    <div class="flex rightC">
+                        <div>
+                            <label>Desde:</label>
+                            <input  type="date" name="desde" value="" id="desde">
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="flex tres">
+                        <div>
+                            <label>Hasta:</label>
+                            <input  type="date" name="hasta" value="" id="hasta">
+                        </div>
+                    </div>
+                </div>
+
+            </div>  
+
+
+            <div class="right">
+
+                <div class="flex-containerCliente pure-form">
+                    <div class="flex leftC">                        
+                    </div>
+                    <div class="flex rightC">
+                        <button class='button-success pure-button' id="verReclaOProdudctos">Volver a listado</button>
+                    </div>
+
+                    <div class="flex tres">
+                    </div>
+                </div>
+
+                <section id="panelResultadosWrapper">
+
+                    <div id="panelRsDictamen"></div>
+                    <div id="panelResultados"></div>
+                </section>
+                <section id="pnlReclamoDetalleWrapper">
+                    <h3>Reclamo de cliente: <strong><span id="reclamo_num"></span></strong></h3>
+
+
+                    <div class="flex-containerProducto pure-form">
+                        <div class="flex leftC">
+                            <p>Cliente: <strong><span id="clienteEncabezado"></span></strong></p>
+                        </div>
+                        <div class="flex rightC">
+                            <p>Fecha emisión: <strong><span id="fecha_emision"></span></strong></p>
+
+
+                        </div>
+                        <div class="flex tres">
+                            <p>Fecha recepción: <strong><span id="fecha_recepcion"></span></strong></p>
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="pnlReclamoDetalle"></div>
+                </section>
+
+
+            </div>
+
+            <div class="footer" id="firmas">
+                <div class="flex-containerProducto pure-form">
+                    <div class="flex leftProduct">
+                        <img src="../img/firmas/firmaMariaBravo.png" width="200" id="firmaMariaBravo"/>
+                        <ul>
+                            <li>María Bravo</li>
+                            <li>Rezalizado</li>
+                        </ul>
+                    </div>
+                    <div class="flex rightProduct">
+                        <img src="../img/firmas/firmaJorgeBelloccio.png" width="200" id="FirmaJorgeBellocchio" class="ocultarFirma"/>
+                        <ul>
+                            <li>Jorge Bellocchio</li>
+                            <li>Aprobado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="" id="notaPie">                    
+                <div id="pec">PEC-08-F03 Revisión 02 Agosto 2018</div>
+                <div id="plazo">Los dictámenes infundados estarán a disposición del cliente por un plazo de 30 días, en caso de no ser requeridos serán desechados.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="flex-containerProducto pure-form">
+                <div class="flex leftC">
+                </div>
+                <div class="flex rightC">
+
+                </div>
+                <div class="flex tres">
+                    <button class="button-success pure-button" value="buscar"  id="buscar"> Buscar </button> 
+
+                </div>
+            </div>
+
+        </div>
+        <div id="panelOK"></div>
+
+
+
+        <script src="../publico/librarys/moment.js"></script>
+        <script src="../publico/js/extras.js"></script>
+        <script src="../publico/js/mvc.js"></script>
+        <script src="../publico/js/sweetalert.min.js"></script>
+        <script src="../publico/js/notificaciones.js"></script>
+        <script src="../publico/js/reclamoBusqueda.js"></script>
+        <script>
+            template = " `<input list='elsector' name='elsector'/> <datalist name='clie' id='elsector'> ${result.map( result =>  ` <option value='${result.nombre}'>${result.nombre}</option> ` ).join('') } </datalist> `; ";
+            Mvc.getDatalist("cliente", "clientes", "#inputSelectCliente", template);
+
+            Mvc.getDatalist("Proveedor", "proveedores", "#inputSelectProveedor", " `<input list='id_proveedor2' name='id_proveedor2' data-value=''/> <datalist name='prot' id='id_proveedor2'> ${result.map( result =>  ` <option data-value='${result.prov_id}' dato='${result.prov_nombre}' id='${result.prov_id}'>${result.prov_nombre}</option> ` ).join('') } </datalist> `; ");
+            Mvc.getDatalist("producto", "productos", "#inputSelectProducto", " `<input list='id_prod' name='id_prod' data-value=''/> <datalist name='prot' id='id_prod'> ${result.map( result =>  ` <option data-value='${result.producto_id}' dato='${result.codigo_producto}' id='${result.producto_id}'>${result.codigo_producto}</option> ` ).join('') } </datalist> `; ");
+
+            ReclamoBusqueda.setButonPorCliente();
+            OptSeacrh.init();
+        </script>
+
+    </body>  
+
+
+</html>

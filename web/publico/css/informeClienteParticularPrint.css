@@ -1,0 +1,104 @@
+body {
+    font-size: 10pt;
+}
+
+#productItem {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#wrapperSearch, #verListadoInformes {
+    display: none;
+}
+
+#WraperTmplDetalle {
+    /*    page-break-before:left;*/
+    page-break-inside: avoid;
+}
+
+
+
+#pnlReclamoDetalle {
+    margin-top: 30px;
+}
+
+.flex-containerProducto {
+    /*    margin-top: 80px;*/
+}
+
+#WraperTmplDetalle {
+    padding-left: 1%;
+    padding-right: 1%;    
+}
+
+.flex {
+    padding: 0px;
+    margin: 0px;
+}
+
+.encabezadoPDF {
+    font-size: 1.2em;
+}
+
+#myChart {
+    display: none;
+}
+
+.container, #datatables {
+    width: 60%;
+    /*    max-width: 1170px;*/
+    /* margin: 0 auto; */
+}
+
+
+#menu {
+    display: none;
+}
+
+#verReclaOProdudctos, #btnPdf, #buscar {
+    display: none;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+
+
+.header {
+    /*display: none;*/
+}
+
+
+#logo {
+    /*    display: block;
+        position: fixed;
+        top: 30px;
+        margin: auto;
+        padding: 10px;*/
+    width: 170px;
+    margin: 0px;
+}
+
+h2 {
+    display: block;
+    position: fixed;
+    top: 30px;
+    left: 300px;
+    font-size: 2em;  
+}
+
+.product {
+    border: 0px;
+}
+@page {
+    size: A4;
+    margin: 0cm;
+}
+
+#pnlFotos img {
+    margin-top: 130px;
+    height: 200px;
+    page-break-inside: avoid;
+}

@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reclamo</title>
+        <meta charset="UTF-8">
+        <link href="../publico/css/themes/bigbox.css" rel="stylesheet"/>
+        <link href="../publico/css/normalize.css" rel="stylesheet"/>
+        <link href="../publico/css/pure.css" rel="stylesheet" />
+        <link href="../publico/css/stylePrincipalGrid.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+
+    <body>         
+        <div class="grid-container">
+            <div class="header">
+                <nav class="flexContainer">
+                    <ul class="nav flexItem flexStart">
+                        <li><a href="#">
+                                <img src="../img/wega-logoOld.png" alt="Logo Wega" id="logo"/>
+                            </a></li>
+                    </ul>
+                    <ul class="nav flexContainer flexEnd">
+                        <li><a href="principal.html">MENU</a></li>
+                        <!--li><a href="">Productos</a></li>
+                        <li><a href="informes.html">Informes</a></li -->
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="left">
+                <h2>Cliente</h2>
+                <div class="flex-containerCliente pure-form">
+                    <div class="flex leftC">
+                        <label>Cliente</label>
+                        <input type="hidden" name="cliente" id="cliente"/>
+
+                        <div id="inputSelectCliente">
+
+                            <input list="clie" name="clie" id="clie_id"/>
+                        </div>
+
+
+
+                    </div>
+                    <div class="flex rightC">
+                        <label>Fecha Emisión</label>
+                        <input  type="date" name="fecha_emision" value="" id="fecha_emision">
+
+
+
+                    </div>
+
+                    <div class="flex tres">
+                        <label>Fecha Recepción</label>
+                        <input  type="date" name="fecha_recepcion" value="" id="fecha_recepcion">
+                    </div>
+                </div>
+
+            </div>  
+            <div class="right">
+                <div id="productPnl" class="pure-form">
+
+                    <article id="productItem" class="pure-form productItemContent product">
+                        <input type="hidden" name="reclamo_id" id="reclamo_id" value="" />
+                        <input type="hidden" name="reclamo_resultado" id="reclamo_resultado" value=""  />
+                        <input type="hidden" name="verif_id" id="verif_id" value=""/>
+                        <input type="hidden" name="verif_tipo" id="verif_tipo" value="" />
+                        <input type="hidden" name="orgigen_id" id="orgigen_id" value="" />
+                        <input type="hidden" name="orgigen_origen" id="orgigen_origen"  value=""/>
+                        <input type="hidden" name="producto_id" id="producto_id" value=""/>
+                        <input type="hidden" name="origen_producto" id="origen_producto"  value=""/>
+                        <input type="hidden" name="cliente_id" id="cliente_id" value=""/>
+                        <input type="hidden" name="fecha_id" id="fecha_id" value=""/>
+                        <input type="hidden" name="cliente_nombre" id="cliente_nombre"  value=""/>
+                        <h3>Producto <span id="productOrder">1</span></h3>
+                        <div class="flex-containerProducto pure-form">
+                            <div class="flex leftProduct">
+                                <label>Producto </label>
+                                <input type="hidden" name="producto" id="producto" />
+                                <span id="inputSelectProducto"></span>
+
+                                <label>Cantidad </label>
+
+                                <input type="number" min="0" name="cantidad_total" placeholder="cant. total" value="0" size="3">
+
+                                <label>Motivo </label>
+
+                                <input type="text" name="Motivo" placeholder="motivo" value="">
+
+                            </div>
+
+                            <div class="flex rightProduct" id="origenes_provee1">
+                                <div class="flex-containerProducto pure-form" id="origenes_provee2">
+                                    <div class="flex leftProduct">
+                                        <label>Origen </label>
+
+                                        <input type="hidden" name="origen" id="origenes"/>
+                                        <span id="inputSelectOrigen"></span>
+                                    </div>
+                                    <div class="flex rightProduct">
+                                        <label>Proveedores</label>
+                                        <input type="hidden" name="id_proveedor" id="id_proveedor"/>
+                                        <span id="inputSelectProveedor"></span>
+                                    </div>
+                                </div>
+
+
+
+
+                                <label>Lote </label>
+
+                                <input type="text" name="lote" placeholder="lote" value="">
+
+
+
+                            </div>
+                        </div>
+
+                        <h3>Análisis</h3>
+                        <div class="flex-containerProducto pure-form">
+                            <div class="flex leftProduct">
+                                <label>Verificación </label>
+
+                                <input type="hidden" name="verificacion" id="verificado"/>
+
+                                <span id="inputSelectVerificacion"></span>
+                            </div>
+                            <div class="flex rightProduct">
+                                <label>Resultado </label>
+
+                                <input type="hidden" name="resultado" id="resultado"/>
+                                <span id="inputSelectResultado"></span>
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="diagnostico">
+                            <h3>Diagnóstico</h3>
+                            <div class="flex-containerProducto pure-form">
+                                <div class="flex leftC">
+
+                                    <label>Diseño </label>
+
+                                    <input type="hidden" name="id_diseno" id="id_diseno"/>
+                                    <span id="inputSelectDiseno"></span>
+
+                                </div>
+                                <div class="flex rightC">
+                                    <label>Proceso </label>
+
+                                    <input type="hidden" name="id_proceso" id="id_proceso"/>
+                                    <span id="inputSelectProceso"></span>
+
+                                </div>
+
+                                <div class="flex tres">
+                                    <label>Falla De Materiales</label>
+                                    <input type="hidden" name="id_falla_mate" id="id_falla_mate"/>
+                                    <span id="inputSelectFallaMat"></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="flex-containerProducto pure-form flex">
+                            <label>Observación </label>
+                            <textarea name="observacion" id="observacion" placeholder="Observacion" rows="5" cols="40"></textarea>
+                        </div>
+
+                        <div class="dictamen">
+
+                            <h3>Dictamen</h3>
+                            <div class="flex-containerProducto pure-form">
+                                <div class="flex leftC">
+                                    <label>Fundados </label>
+                                    <input type="number" min="0" name="fundados" id="fundados" placeholder="fundados" value="0">
+                                </div>
+                                <div class="flex rightC">
+                                    <label>Infudados </label>
+                                    <input type="number"  min="0" name="infundados" id="infundados" placeholder="infundados" value="0">
+                                </div>
+                                <div class="flex tres">
+                                    <label>Tema Comercial </label>
+                                    <input type="number" min="0" name="cant_tema_comercial" id="cant_tema_comercial" placeholder="Comercial" value="0">
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+                    </article>
+
+                </div>
+                <div id="buttons">
+                    <div class="flex-containerProducto pure-form">
+                        <div class="flex leftC">
+                            <button class="button-success pure-button" id="producAddBtn">Agregar producto</button>
+                        </div>
+                        <div class="flex rightC"></div>
+                        <div class="flex tres"></div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="footer">
+                <div class="flex-containerProducto pure-form">
+                    <div class="flex leftC">
+                        <button type="button" class="button-warning pure-button" id="saveDraft" >Grabar borrador</button>
+                        <button type="button" class="button-warning pure-button" id="recoverDraft" >Recuperar borrador</button>
+                    </div>
+                    <div class="flex rightC">
+
+                    </div>
+                    <div class="flex tres">
+                        <button class="button-success pure-button" value="Nuevo reclamo"  id="grabar"> Grabar </button> 
+                        <button type="button" class="button-warning pure-button">Cancelar</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+        </div>
+
+        <script src="../publico/js/reclamar.js"></script>
+        <script src="../publico/js/extras.js"></script>
+        <script src="../publico/js/productoTemporal.js"></script>
+        <script src="../publico/js/humane.js"></script>
+        <script src="../publico/js/mvc.js"></script>  
+        <script src="../publico/js/validate.js"></script>
+        <script src="../publico/js/sweetalert.min.js"></script>
+        <script src="../publico/js/notificaciones.js"></script>
+        <script>
+            Mvc.storageInit();
+
+        </script>
+    </body>  
+
+
+</html>

@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Familias</title>
+        <meta charset="UTF-8">
+
+        <link href="../../publico/css/normalize.css" rel="stylesheet"/>
+        <link href="../../publico/css/pure.css" rel="stylesheet" />
+        <link href="../../publico/css/stylePrincipalGrid.css" rel="stylesheet" />
+        <link href="../../publico/css/cliente.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+
+    <body> 
+        <div class="grid-container">
+            <div class="header">
+                <nav class="flexContainer">
+                    <ul class="nav flexItem flexStart">
+                        <li><a href="#">
+                                <img src="../../img/wega-logoOld.png" alt="Logo Wega" id="logo"/>
+                            </a></li>
+                    </ul>
+                    <ul class="nav flexContainer flexEnd">
+                        <li><a href="../principal.html">MENU</a></li>
+                        <!--li><a href="">Productos</a></li>
+                        <li><a href="informes.html">Informes</a></li -->
+
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="right">
+                <div id="clientPnl" class="pure-form">
+                    <h1>Familias</h1>
+                    <div class="flex-containerCliente pure-form ">
+                        <div class="flex leftProduct">
+
+                            <label>Nueva familia</label>
+                            <input name="newNameClient" id="newNameFamiliaInsert"/>
+                        </div>
+                        <div class="flex rightProduct newCli">
+                            <button class="button-success pure-button" value="insertar"  id="insertar"> Insertar </button> 
+                        </div>
+
+                    </div>
+
+                    <div class="flex-containerCliente pure-form newNameClientPnl">
+                        <div class="flex leftProduct ">
+                            <label>Seleccione Familia:</label>
+
+                            <input type="hidden" name="familia_id" id="familia_id"/>
+
+                            <input type="hidden" name="familia" id="familia" />
+                            <span id="inputSelectFamilia"></span>
+
+                            <label>Nuevo nombre:</label>
+                            <input name="newNameFamilia" id="newNameFamilia"/>
+                        </div>
+                        <div class="flex rightProduct updateClie">
+                            <button class="button-success pure-button" value="Nuevo reclamo"  id="actualizar"> Actualizar </button> 
+                            <button type="button" class="button-warning pure-button" id="borrar">Borrar</button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="footer">
+
+
+            </div>
+        </div>
+
+
+        <script src="../../publico/js/reclamar.js"></script>
+        <script src="../../publico/js/extras.js"></script>
+        <script src="../../publico/js/mvc.js"></script>
+        <script src="../../publico/js/abm.js"></script>
+        <script src="../../publico/js/sweetalert.min.js"></script>
+        <script src="../../publico/js/notificaciones.js"></script>
+        <script>
+            templateFamilia = " `<input list='familia_id2' name='familia_id2' data-value=''/> <datalist name='prot2' id='familia_id2'> ${result.map( result =>  ` <option data-value='${result.id}' dato='${result.nombre}' id='${result.id}'>${result.nombre}</option> ` ).join('') } </datalist> `; ";
+            Mvc.getDatalist("Familia", "familia", "#inputSelectFamilia", templateFamilia);
+
+            AbmConfiguraciones.buttonFamilia();
+        </script>
+    </body>  
+
+
+</html>

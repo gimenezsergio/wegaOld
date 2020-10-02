@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GESTION Y ADMINISTRACION DE RECLAMOS</title>
+        <meta charset="UTF-8">
+
+        <link href="../publico/css/normalize.css" rel="stylesheet"/>
+        <link href="../publico/css/pure.css" rel="stylesheet" />
+        <link href="../publico/css/stylePrincipalGrid.css" rel="stylesheet" />
+        <link href="../publico/css/informe.css" rel="stylesheet" />
+        <link href="../publico/css/informe_print.css" rel="stylesheet" media="print" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body> 
+        <div class="grid-container">
+            <div class="header">
+                <nav class="flexContainer">
+                    <ul class="nav flexItem flexStart">
+                        <li><a href="#">
+                                <img src="../img/wega-logoOld.png" alt="Logo Wega" id="logo"/>
+                            </a></li>
+                    </ul>
+                    <ul class="nav flexContainer flexEnd">
+                        <li><a href="principal.html">MENU</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right">
+                <div id="reclamos-table">
+                    <h1>Listado de reclamos</h1>
+                    <table class="pure-table">
+                        <thead>
+                            <tr>
+                                <th>ID <th>Cliente <th>Fecha Emision <th>Fecha Recepcion
+                        <tbody>
+                        <template id="row">
+                            <tr class="pure-table-odd"><td><td><td><td>
+                        </template>
+                    </table>
+                </div>
+                <div id="productPnl" class="pure-form">
+                </div>
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <script>
+            class ReclamoInforme {
+                static obtener() {
+                    let xhr = new XMLHttpRequest();
+                    xhr.open("GET", "../ReclamoAll");
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4) {
+                            if (xhr.status === 200) {
+                                console.log("resultado" + xhr.responseText);
+                                ReclamoInforme.templateReclamo(xhr.responseText);
+                                // caso de exito
+                            } else {
+                                //caso de error
+                            }
+                        } else {
+                            //caso de error
+                        }
+                    };
+                    xhr.send();
+
+                }
+
+                static templateReclamo(data) {
+                    console.log("templateReclamo INIT");
+                    let template = document.querySelector('#row');
+                    console.log("Antes de parse: " + data);
+                    console.log("Dato: " + data[0])
+                    data = JSON.parse(data);
+                    console.log("Luego de parseS: " + data);
+                    console.log("Dato: " + data[0].id_reclamo)
+                    for (let i = 0; i < data.length; i += 1) {
+                        let cat = data[i];
+                        let clone = template.content.cloneNode(true);
+                        let cells = clone.querySelectorAll('td');
+                        cells[0].innerHTML = "<a href='" + data[i].id_reclamo + "'>" + data[i].id_reclamo + "</a>";
+                        cells[1].textContent = data[i].cliente;
+                        cells[2].textContent = data[i].fecha_emision;
+                        cells[3].textContent = data[i].fecha_recepcion;
+                        template.parentNode.appendChild(clone);
+                        console.log("Dato: " + data[i])
+                    }
+                    console.log("templateReclamo OK");
+                }
+            }
+            ReclamoInforme.obtener();
+
+        </script>
+
+
+    </body>  
+
+
+</html>

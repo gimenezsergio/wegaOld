@@ -1,0 +1,173 @@
+body {
+    font-size: 10pt;
+}
+
+nav {
+    border: 1px solid silver;
+    height: 100px;
+    width: 95%;
+    margin-left: 16px;
+}
+
+#printPdfDivisor{
+    position: absolute; 
+  right: 0px; 
+  top: 0px;
+  width: 155px; 
+  height: 100px;
+    border-left: 1px solid silver;
+    
+}
+
+#wrapperSearch {
+    display: none;
+}
+
+#WraperTmplDetalle {
+/*    page-break-before:left;*/
+ page-break-inside: avoid;
+}
+
+#pnlReclamoDetalle {
+    margin-top: 15px;
+}
+
+.flex-containerProducto {
+/*    margin-top: 80px;*/
+}
+
+#WraperTmplDetalle {
+    padding-left: 1%;
+    padding-right: 1%;    
+}
+
+h3 {
+     display: block;
+    position: fixed;
+    top: 35px;
+    left: 260px;
+    font-size: 20pt;
+    margin: 0px;
+    
+}
+
+.flex {
+    padding: 0px;
+    margin: 0px;
+}
+
+.encabezadoPDF {
+    font-size: 10pt;
+}
+
+#myChart {
+    display: none;
+}
+
+.container, #datatables {
+    width: 60%;
+/*    max-width: 1170px;*/
+    /* margin: 0 auto; */
+}
+
+
+#menu {
+    display: none;
+}
+
+#verReclaOProdudctos, #btnPdf, #buscar {
+    display: none;
+}
+
+#firmas {
+    display: block;
+/*    position: fixed;
+    bottom: 0;*/
+    width: 80%;
+        text-align: center;
+    font-size: 8pt;
+}
+#firmas img {
+    margin-left: 100px;
+}
+
+#notaPie {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    /*
+    width: 90%;
+        text-align: center;
+    font-size: 8pt;*/
+width: 80%;
+   
+    margin: auto;
+    padding: 10px;
+    font-size: 8pt;
+}
+
+#pec {
+    display: block;
+    position: fixed;
+    top: 30px;
+    left: 650px;
+    font-size: 8pt;
+    width: 70px;
+}
+
+#plazo {
+    margin-left: 40px;
+    width: 110%;
+    background-color: red;
+}
+
+.ocultarFirma {
+    display: none;
+}
+
+.mostrarFirma {
+    display: block;
+}
+
+
+
+
+ul {
+    list-style-type: none;
+}
+
+
+
+.header {
+    /*display: none;*/
+}
+
+
+#logo {
+/*    display: block;
+    position: fixed;
+    top: 30px;
+    margin: auto;
+    padding: 10px;*/
+    width: 170px;
+    margin: 0px;
+    margin-left: -30px;
+}
+
+#logoPdf {
+    display: block;
+    position: fixed;
+    top: 10px;
+    margin: auto;
+    
+    width: 170px;
+    margin: 0px;
+    margin-left: -30px;
+}
+
+
+
+@page {
+    size: A4;
+    margin: 0.5cm;
+}

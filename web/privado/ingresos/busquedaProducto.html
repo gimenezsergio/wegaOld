@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Precarga</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="../../publico/css/normalize.css" rel="stylesheet"/>
+        <link href="../../publico/css/pure.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../../publico/css/ingresos.css" />
+        <link href="../../publico/css/ingresos_print_table.css" rel="stylesheet" media="print" />
+
+
+
+
+    </head>
+    <body class="wrapper">
+
+        <header>
+
+            <nav class="flexContainer">
+                <div id="printPdfDivisor"></div>
+                <ul class="nav flexItem flexStart">
+                    <li><a href="#">
+                            <img src="../../img/wega-logoOld.png" alt="Logo Wega" id="logo"/>
+                            <img src="../../img/wega-logoOld.png" alt="Logo Wega" id="logoPdf"/>
+                        </a></li>
+                </ul>
+                <h3 id="titleInfGenerico">Control de ingreso</h3>
+                <ul class="nav flexContainer flexEnd">
+                    <li><a href="../principal.html">MENU</a></li>
+                    
+
+                </ul>
+            </nav>
+        </header>
+        
+
+        <section  >
+            <div id="cuerpoPackagingAuxPrint"></div>
+            <div></div><div></div>
+
+            <h2>Control de Ingresos</h2>
+            <div class="opciones" id="panelOpciones"> 
+
+                <article>
+                    <button class="OpcionBtn" id="nuevoBtn">Busqueda</button>                    
+                    
+                </article>
+
+            </div>
+
+
+            <!--div class="pure-form pure-form-stacked" id="panelPrincipal"-->
+            <div class="pure-form" id="panelPrincipal">
+                
+                
+                <div id="pnlNuevo">
+
+                    <div id="encabezado"> 
+                       
+                        <div id="nuevo">
+                            <article>
+                                
+                            </article>
+                            <article>
+                                <label>Desde</label>
+                                <input  type="date" name="fecha_desde" value="" id="fecha_desde">
+                            </article>
+                            <article>
+                                <label>Hasta</label>
+                                <input  type="date" name="fecha_hasta" value="" id="fecha_hasta">
+                            </article>
+                            
+
+                            <article>
+                                <label>Producto</label>
+                                <input type="hidden" name="producto_id" id="producto_id"/>
+
+                            <input type="hidden" name="producto" id="producto" />
+                            <span id="inputSelectProducto"></span>
+                            </article>
+                            
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="center">
+                            <!--h3>Items</h3-->
+                                                                                
+                            <button type="button" class="pure-button-active pure-button" id="consutarBusquedaIngresos">Consultar</button>                            
+                            <div id="itemsContenedor">
+
+                                
+                            </div>   
+                        </div>
+                        
+                    </div>
+
+
+                    <!--div>
+                        <table style="text-align:center;">
+                                <tr> <th>Código</th> <th>Cantidad</th>  <th>Observaciones</th>  </tr>
+                                <tr><td><input value="1" readonly=""/></td> <td><input value="A-2001" readonly=""/></td> <td>30/08/2018</td> <td> <button onclick="document.getElementById('cargaModal').style.display = 'block';" class="button-success pure-button">Cargar</button> </td> </tr>
+                                
+                                
+                            </table>
+                    </div-->
+                    
+                    
+
+
+                </div>
+                <div id="panelMensajes"></div>
+            </div>
+
+        </section>
+        <footer>
+        </footer>
+        
+        
+
+        
+        
+
+        <div id="MedidasModal" class="modalMedidas pure-form">
+            <div class="modal-content-medidas">
+
+                <button id="MedidasClose" class="closeModal">X</button>
+                <div id="MedidasContent"></div>  
+            </div>
+        </div>
+        
+        <div id="myModal" class="modalSpinner">
+            <div class="modal-contentSpinner">
+                <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+        </div>
+
+
+
+        <script src="../../publico/js/mvc.js"></script>
+        <script src="../../publico/js/extras.js"></script>
+        <script src="../../publico/js/sweetalert.min.js"></script>
+        <script src="../../publico/js/notificaciones.js"></script>        
+        <script src="../../publico/js/ingresos/busquedaProducto.js"></script>        
+        
+        <script>
+            template = " `<input list='id_prod' name='id_prod' data-value=''/> <datalist name='prot' id='id_prod'> ${result.map( result =>  ` <option data-value='${result.producto_id}' dato='${result.codigo_producto}' id='${result.producto_id}'>${result.codigo_producto}</option> ` ).join('') } </datalist> `; ";
+            Mvc.getDatalist("producto", "productos", "#inputSelectProducto", template);
+           
+        </script>
+    </body>
+</html>

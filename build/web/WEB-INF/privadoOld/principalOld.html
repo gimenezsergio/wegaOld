@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GESTION Y ADMINISTRACION DE RECLAMOS2</title>
+        <meta charset="UTF-8">
+
+        
+        <link href="../../publico/css/bootstrap.css" rel="stylesheet" />
+        <link href="../../publico/css/style.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    </head>
+
+
+    <body  onLoad="REL.cargar();VER.cargar();ORI.entrada();PRO.cargar();CLI.cargar();extras.cargar_fecha()"> 
+
+        <div id="contenedor" class="container">
+            <header class="row">
+                <div class="col-md-4">
+                    <img src="../img/wega-logo.png" alt="" />
+
+                </div>
+
+                <div class="col-md-7">
+
+                    <h2>Sistema de reclamos</h2>
+                    
+                    
+                     <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+          
+                                <li><a href="index.html">Reclamos</a></li>
+                                <li><a href="informesOld.html">Informes</a></li>
+                                <li><a href="gestionOld.html">Gestión clientes/productos</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+<!--                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#"></a>
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="index.html">Reclamos</a></li>
+                                <li><a href="informes.html">Informes</a></li>
+                                <li><a href="gestion.html">Gestión clientes/productos</a></li>
+                            </ul>
+                        </div>
+                    </nav>-->
+
+                </div>
+
+            </header>
+
+
+
+
+            <br><br>
+
+            
+
+
+                <div class="row" id="pnl_cliente">
+                    <h2>Cliente</h2>
+                    <div class="col-sm-6">
+
+
+                        <div class="form-group">
+                            <label>Fecha</label>
+                            <input class="form-control" type="text" name="fecha" value="" id="fecha_actual" disabled="">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Cliente</label>
+                            <input class="form-control" type="hidden" name="cliente" id="cliente"/>
+
+                            <div id="inputSelectCliente">
+
+                                <input class="form-control" list="clie" name="clie" id="clie"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Fecha emisión</label>
+                            <input class="form-control" type="date" name="fecha" value="" >
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Fecha recepción</label>
+                            <input class="form-control" type="date" name="fecha" value="" >
+
+                        </div>
+                        <div class="form-group">
+                            <label>Nº reclamo</label>
+                            <input class="form-control" type="text" name="nro_reclamo" placeholder="numero de reclamo"value=""/>
+
+                        </div>  
+                    </div>
+                </div>
+
+
+                <div class="row" id="pnl_producto">
+                    <h2>Producto</h2>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>codigo producto </label>
+                            <input class="form-control" type="hidden" name="producto" id="producto"/>
+                            <div id="inputSelectProducto"></div>
+
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>verificacion </label>
+
+                            <input class="form-control" type="hidden" name="verificacion" id="verificado"/>
+                            <div id="inputSelectVerificacion"></div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label>Cantidad </label>
+
+                            <input class="form-control" type="text" name="cantidad_total" placeholder="cant. total"value="">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label>observacion </label>
+
+                            <input class="form-control" type="text" name="observacion" placeholder="observacion" value="" />
+
+                        </div>
+
+                        <!--div class="form-group">
+                            <label>Fecha </label>
+                            <input  class="form-control" type="text" name="fecha" placeholder="fecha"/>
+
+                        </div-->
+
+
+
+
+                    </div>
+                    <div class="col-sm-6">
+                        <form>
+                            <div class="form-group">
+                                <label>motivo </label>
+
+                                <input class="form-control" type="text" name="Motivo" placeholder="motivo"value="">
+
+                            </div>
+
+
+                            <div class="form-group">
+                                <label>origen </label>
+
+                                <input class="form-control" type="hidden" name="origen" id="origenes"/>
+                                <div id="inputSelectOrigen"></div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>lote </label>
+
+                                <input class="form-control" type="text" name="lote" placeholder="lote"value="">
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>resultado </label>
+
+                                <input class="form-control" type="hidden" name="resultado" id="resultado"/>
+                                <div id="inputSelectResultado"></div>
+
+                            </div>
+                        </form>
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="row form-inline" id="pnl_dictamen">
+                    <h2>Dictamen</h2>
+
+                    <div class="col-sm-4">
+                        <label>cant. infudados </label>
+
+                        <input class="form-control" type="text" name="infundados" placeholder="infundados" value="">
+                    </div>
+                    <div class="col-sm-4">
+                        <label>cant. fundados </label>
+                        <input class="form-control" type="text" name="fundados" placeholder="fundados" value="">
+                    </div>
+                    <div class="col-sm-4">
+                        <label>cant. tema comercial </label>
+                        <input class="form-control" type="text" name="cant_tema_comercial" placeholder="cant_tema_comercial" value="">
+
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <input class="btn btn-primary btn-block" type="button" name="guardar los datos" value="nuevo reclamo" placeholder="guardar los datos" onclick="RECLAMAR.primero();">
+                    </div>
+
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-danger btn-block">Cancelar</button>
+                    </div>
+
+                </div>
+
+
+
+        </div>
+
+        <br>
+        <div id="panelOK"></div>
+        <div id="paneljuego"></div>
+        <!--div id="contenedores"></div--> 
+        <input type="hidden" name="id" id="re_id" value="" />
+        <input type="hidden" name="re" id="re_resultado" value=""  />
+        <input type="hidden" name="id" id="ve_id" />
+        <input type="hidden" name="tipo" id="ve_tipo"  />
+        <input type="hidden" name="id_origen" id="or_id" />
+        <input type="hidden" name="origen" id="or_origen"  />
+        <input type="hidden" name="id_producto" id="or_id" />
+        <input type="hidden" name="codigo_producto" id="or_producto"  />
+        <input type="hidden" name="id_cliente" id="ci_id" />
+        <!--   <input type="hidden" name="cliente" id="ci_nombre"  /> -->
+        <input type="hidden" name="id_fecha" id="ci_id" />
+        <input type="hidden" name="fecha" id="ci_nombre"  />
+
+    <!--script type="../text/javascript" src="js_pag/jquery-1.2.6.min.js"></script>    
+    <script src="../js_pag/jascript.js" type="text/javascript"></script-->
+    <script src="../../publico/js/reclamar.js"></script>
+    <script src="../../publico/js/extras.js"></script>
+    <script src="../publico/js/origenes.js"></script>        
+    <script src="../publico/js/producto.js"></script>
+    <script src="../publico/js/verificacion.js"></script>
+    <script src="../publico/js/resultado.js"></script>
+    <script src="../publico/js/origenes.js"></script>
+    <script src="../publico/js/producto.js"></script>
+    <script src="../publico/js/clientes.js"></script>
+    <!--script src="../../publico/js/topnav.js"></script-->
+    <script>REL.cargar();VER.cargar();ORI.entrada();PRO.cargar();CLI.cargar();extras.cargar_fecha();</script>
+
+    </body>  
+    
+
+</html>
+

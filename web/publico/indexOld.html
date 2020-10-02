@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>System access</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../publico/css/bootstrap.css" />
+        
+        <link rel="stylesheet" href="../publico/css/style.css" />
+        <link rel="stylesheet" href="../publico/css/flatty.css" />
+    </head>
+    <body>
+
+
+        
+        <div class="container" id="contenedorPrincipal">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+           <!-- <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" /> -->
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin" action="../LoginForm" method="post">
+            <!-- <form class="form-signin"> -->
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text" id="inputUser" name="inputUser" class="form-control" placeholder="User" required autofocus value="Jorge">
+                <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required value="wega2015">
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me">Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" id="btnVerificar" >Sign in</button>
+                
+                <!--
+                <button class="btn btn-lg btn-primary btn-block btn-signin-g" type="submit">Login whith Google</button>
+                
+                <button class="btn btn-lg btn-primary btn-block btn-signin-fb" type="submit">Login whith Facebook</button>
+                -->
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+            
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+    <script src="../publico/js/humane.js"></script>
+    <script src="../publico/js/verificarAcceso.js"></script>
+    </body>
+</html>

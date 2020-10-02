@@ -1,0 +1,104 @@
+.right {
+    padding-left: 5%;
+    padding-right:  5%;
+}
+#logoPdf {
+    display: none;
+}
+
+#firmas, #notaPie {
+    display: none;
+}
+
+
+#aprobado {
+    color: green;
+    font-weight: bold;
+}
+
+#pendiente {
+    color: red;
+    font-weight: bold;
+}
+
+
+
+.itemDiagnostico {
+    margin-left: 40px;
+}
+
+
+
+/*Search radio option buttons*/
+
+.switch {
+  position: relative;
+  width: 19rem;
+  padding: 0 1rem;
+  margin-left: 35%;
+  font-size: 12pt;
+  height: 3rem;
+  background: red;
+  border-radius: 30px;
+  color: white;
+}
+.switch:before {
+  content: "  ";
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 3rem;
+  background: red;
+  border-radius: 30px;
+}
+.switch__label {
+  display: inline-block;
+  width: 4rem;
+  padding: 1rem;
+  
+  cursor: pointer;
+  transition: color 200ms ease-out;
+}
+.switch__label:hover {
+  color: black;
+}
+.switch__indicator {
+  width: 5rem;
+  height: 0.3rem;
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+  background: white;
+  border-radius: 0%;
+  transition: transform 600ms cubic-bezier(0.02, 0.94, 0.09, 0.97), background 300ms cubic-bezier(0.17, 0.67, 0.14, 1.03);
+  transform: translate3d(1rem, 0, 0);
+}
+.switch input#one:checked ~ .switch__indicator {
+  background: white;
+  transform: translate3d(1.2rem, 0, 0);
+}
+.switch input#two:checked ~ .switch__indicator {
+  background: white;
+  transform: translate3d(8.5rem, 0, 0);
+}
+.switch input#three:checked ~ .switch__indicator {
+  background: white;
+  transform: translate3d(14.6rem, 0, 0);
+}
+.switch input[type="radio"]:not(:checked), .switch input[type="radio"]:checked {
+  display: none;
+}
+
+
+.alertaDictamen {
+    color: red;
+}
+
+.grid-container {
+    background-color: white;
+}
+
+
+/* INFORME PARTICULAR*/
+

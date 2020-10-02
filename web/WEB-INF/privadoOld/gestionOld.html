@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GESTION Y ADMINISTRACION DE RECLAMOS2</title>
+        <meta charset="UTF-8">
+        <link href="../../publico/css/bootstrap.css" rel="stylesheet" />
+        <link href="../../publico/css/style.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    </head>
+
+
+    <body >
+
+        <div id="contenedor" class="container">
+
+            <header class="row">
+                <div class="col-md-4">
+                    <img src="img/wega-logoOld.png" alt="" />
+
+                </div>
+
+                <div class="col-md-7">
+
+                    <h2>Sistema de reclamos</h2>
+
+
+                    <!-- Static navbar -->
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#"></a>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+
+                                <ul class="nav navbar-nav navbar-right">
+
+                                    <li><a href="">Reclamos</a></li>
+                                    <li><a href="informesOld.html">Informes</a></li>
+                                    <li><a href="gestionOld.html">Gestión clientes/productos</a></li>
+                                </ul>
+                            </div><!--/.nav-collapse -->
+                        </div><!--/.container-fluid -->
+                    </nav>
+
+                </div>
+
+            </header>
+
+
+            <div class="row" id="pnl_producto">
+
+                <div class="col-md-4 col-md-offset-4">
+
+
+                    <div class="form-group">
+                        <label>Nombre del cliente:</label>
+                        <form  id="cliente" >      
+                            <input  class="form-control" id="cli" type="text" name="nombre" value="" placeholder="nuevo cliente">
+                        </form>
+                    </div>   
+   <input class="btn_submit form-control btn btn-primary btn-block" type="button" onclick="console.log('Paso 1');CLI.entrada();console.log('Paso 2');extras.limpiarInputs();console.log('Paso 3');" value="Guardar">
+
+                </div>
+                
+            </div>    
+                
+                <div class="row" id="pnl_cliente">    
+
+
+                <div class="col-md-4 col-md-offset-4">
+
+                    <div class="form-group">
+                        <label>Ingresar producto nuevo:</label>
+                        <form  id="producto" >      
+                            <input  class="form-control" id="prod" type="text" name="nombre" value="" placeholder="nuevo producto">
+                        </form>
+                    </div>
+
+                    <input class="btn_submit form-control btn btn-primary btn-block" type="button" onclick="console.log('Paso 1');PRO.entrada();console.log('Paso 2');extras.limpiarInputs();console.log('Paso 3');" value="Guardar">
+                    
+                </div>
+
+
+            </div>
+
+
+        </div>
+      <!--  <script type="text/javascript" src="js_pag/jquery-1.2.6.min.js"></script>   
+        <script src="js_pag/jascript.js" type="text/javascript"></script> -->
+        <script src=" ../../publico/js/login.js"></script> 
+        <script src="../../publico/js/reclamar.js"></script>
+        <script src="../../publico/js/clientes.js"></script>
+        <script src="../../publico/js/producto.js"></script>
+        <!--script src="js/topnav.js"></script-->
+        <script src="../../publico/js/extras.js"></script>
+    </body>
+</html>
+
+
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Informe sobre índice de fallas</title>
+        <meta charset="UTF-8">
+
+        <link href="../../publico/css/normalize.css" rel="stylesheet"/>
+        <link href="../../publico/css/pure.css" rel="stylesheet" />
+        <link href="../../publico/css/stylePrincipalGrid.css" rel="stylesheet" />
+        <link href="../../publico/css/informe.css" rel="stylesheet" />
+        <link href="../../publico/css/informe_print.css" rel="stylesheet" media="print" />
+        <link href="../../publico/librarys/datatable/app.style.css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body> 
+        <div class="grid-container">
+            <div class="header">
+                <nav class="flexContainer">
+                    <ul class="nav flexItem flexStart">
+                        <li><a href="#">
+                                <img src="../../img/wega-logoOld.png" alt="Logo Wega" id="logo"/>
+                            </a></li>
+                    </ul>
+                    <ul class="nav flexContainer flexEnd">
+                        <li><a href="../principal.html">MENU</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right">
+                <div id="reclamos-table">
+                    <h1>Informe sobre índice de fallas</h1>
+
+                    <div class="flex-containerCliente pure-form">
+
+                        <div class="flex rightC">
+                            <label>Fecha desde</label>
+                            <input  type="date" name="fecha_desde" value="" id="fecha_desde">
+
+
+
+                        </div>
+
+                        <div class="flex tres">
+                            <label>Fecha hasta</label>
+                            <input  type="date" name="fecha_hasta" value="" id="fecha_hasta">
+                        </div>
+
+                        <div class="flex leftC">
+                            <label>.</label>
+                            <button class="button-success pure-button" id="buscarProveedorProvisorio"> Buscar </button>
+                        </div>
+                    </div>
+                  
+
+
+                    <!--table class="pure-table">
+                        <thead>
+                            <tr>
+                                <th>Producto</th> <th>Fundados</th> <th>Infundados</th> <th>Tema Comercial</th> <th>Resultado</th> <th>Origen</th> <th>Lote</th> 
+                        <tbody>
+                        <template id="row">
+                            <tr><td></td> <td></td ><td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+                        </template>
+                    </table>
+                </div-->
+
+                    <div id="datatables" class="container">
+                        <div class="grid-row" layout="row top-stretch">
+                            <div class="grid-cell">
+                                <datatable id="data-table-main" 
+                                           :source="deliveries.rows" 
+                                           :striped="deliveries.striped"
+                                           :line-numbers="deliveries.lineNumbers">
+                                    <datatable-column v-for="column in deliveries.columns"
+                                                      :id="column.id"
+                                                      :label="column.label"
+                                                      :width="column.width"
+                                                      :sortable="column.sortable"
+                                                      :groupable="column.groupable"
+                                                      :aggregators="column.aggregators"
+                                                      :formatter="column.formatter">
+                                    </datatable-column>
+                                </datatable>
+                            </div>
+                        </div>
+
+                        <div id="productPnl" class="pure-form">
+                        </div>
+                    </div>
+
+                    <canvas id="myChart"></canvas>
+
+                    <div class="footer">
+                        <div class="flex-containerProducto pure-form">
+                            <div class="flex leftC">
+                            </div>
+                            <div class="flex rightC">
+
+                            </div>
+                            <div class="flex tres">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="https://unpkg.com/vue/dist/vue.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.27.1/date_fns.min.js"></script>
+                <script src="../../publico/librarys/datatable/components.bundle.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+                <script src="../../publico/js/validate.js"></script>
+                <script src="../../publico/js/extras.js"></script>
+                <script src="../../publico/js/sweetalert.min.js"></script>
+                <script src="../../publico/js/notificaciones.js"></script>
+                <script src="../../publico/js/mvc.js"></script>
+                <script src="../../publico/js/informes/informeProveedorBorrar.js"></script>
+              
+
+               
+                </body>  
+
+
+                </html>

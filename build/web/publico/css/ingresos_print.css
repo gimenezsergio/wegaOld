@@ -1,0 +1,204 @@
+#cargaBtn, #btnInfGenericoPdf, #pnlInformeGenerico, body, #panelOpciones, h2, .flexEnd {
+    display: none;
+}
+body {
+    font-size: 10pt;
+}
+
+.modal-content {
+    width: 95%;
+    border: none;
+}
+
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.wrapper {
+    background-color: white;
+}
+
+#cargaEncabezado {
+    margin-bottom: 0px;
+}
+
+.modal {
+    background-color: white;
+    margin-top: 110px;
+}
+
+.retenidofalse, .no_retenido {
+    background-color: green;
+    color: white;
+    pointer-events: none;
+}
+
+* {
+    -webkit-print-color-adjust:exact;
+}
+
+#printPdfDivisor{
+    position: absolute; 
+    right: 0px; 
+    top: 0px;
+    width: 120px; 
+    height: 100px;
+    border-left: 1px solid silver;
+
+}
+
+
+
+
+nav {
+    border: 1px solid silver;
+    height: 110px;
+    width: 95%;
+    margin-left: 16px;
+}
+#logo {
+    display: block;
+    position: fixed;
+    top: 10px;
+    margin: auto;
+    padding-left: 5px;
+    padding: 10px;
+    width: 170px;
+    margin: 0px;
+}
+
+#logoPdf {
+    display: block;
+    position: fixed;
+    padding-left: 5px;
+    top: 10px;
+    margin: auto;   
+    width: 170px;
+    margin: 0px;
+}
+
+#detalleEncabezado{
+    width: 100%;
+    /*        margin-left: -85px;*/
+    /*margin-left: -13px;*/
+    text-align: justify; 
+}
+
+#detalleEncabezado {
+    /*    page-break-before:left;*/
+    /*    page-break-inside: avoid;*/
+}
+
+#titleInfGenerico {
+    display: block;
+    position: fixed;
+    top: 35px;
+    left: 210px;
+    width: 220px;
+    font-size: 23pt;
+    text-align: left;
+}
+
+#itemMaestroIdPdf {
+    display: block;
+    /*    position: fixed;
+        
+        top: 35px;
+        left: 485px;*/
+    font-size: 22pt;
+}
+#pec {
+    display: block;
+    position: fixed;
+    top: 30px;
+    left: 657px;
+    font-size: 8pt;
+    width: 70px;
+}
+
+#notaPie {
+    display: block;
+    position: fixed;
+    bottom: 0;   
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    font-size: 8pt;
+}
+
+#firmas {
+    display: block;
+    width: 80%;
+    text-align: center;
+    font-size: 8pt;
+}
+
+#firmas > ul > li {
+    display: block;
+}
+
+
+#cuerpoPackagingAuxPrint {
+    display: block;    
+}
+
+
+#cuerpoPackaging {
+    display: none;    
+}
+
+
+
+
+table {
+    position: absolute;
+    top: 250px;
+    left: 0px;
+}
+
+
+tr,td, table {
+    margin-top: 30px;
+
+}
+
+td {
+    height: 20px;
+}
+
+/*.pdfItemProduc {    
+    border: 1px solid red;
+    page-break-inside: avoid;
+    margin-top: 100px;
+}*/
+
+.pdfItemProduc div{    
+      page-break-after: always;
+}
+
+
+.header {
+    position: fixed;
+    top:0;
+}
+
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
+
+
+@page {
+    size: A4;
+    margin: 0.5cm;
+}
+
+/*@page :first {
+    size: A4;
+    margin: 0.5cm;
+}*/
+

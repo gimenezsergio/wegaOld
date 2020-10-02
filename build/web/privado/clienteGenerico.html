@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Buscar reclamo</title>
+        <meta charset="UTF-8">
+        <link href="../publico/css/themes/bigbox.css" rel="stylesheet"/>
+        <link href="../publico/css/normalize.css" rel="stylesheet"/>
+        <link href="../publico/css/pure.css" rel="stylesheet" />
+        <link href="../publico/css/stylePrincipalGrid.css" rel="stylesheet" />
+        <link href="../publico/css/informe.css" rel="stylesheet" />
+        <link href="../publico/css/informe_print.css" rel="stylesheet" media="print" />
+        <!--link href="../publico/css/informe_print.css" rel="stylesheet" /-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+
+    <body> 
+        <div class="">
+            <div id="containerPDF">
+                <table style="height: 100%; width: 100%;">
+                    <thead>
+                        <tr><td class="style1"><strong></strong> <div class="header">
+                                    <nav class="flexContainer">
+                                        <div id="printPdfDivisor"></div>
+                                        <ul class="nav flexItem flexStart">
+                                            <li><a href="#">
+                                                    <img src="../img/wega-logoOld.png" alt="Logo Wega" id="logo"/>
+                                                    <img src="../img/wega-logoOld.png" alt="Logo Wega" id="logoPdf"/>
+                                                </a></li>
+                                        </ul>
+                                        <ul class="nav flexContainer flexEnd">
+                                            <li><a href="principal.html" id="menu">MENU</a></li>
+                                            <!--li><a href="">Productos</a></li>
+                                            <li><a href="informes.html">Informes</a></li -->
+
+                                        </ul>
+                                    </nav>
+                                </div>  </td></tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div id="wrapperSearch" class="left">
+
+
+                                </div>  
+                                <div class="right">
+
+                                    <div class="flex-containerCliente pure-form">
+                                        <div class="flex leftC">                        
+                                        </div>
+                                        <div class="flex rightC">
+                                            <button class='button-success pure-button' id="verReclaOProdudctos">Volver a listado</button>
+                                        </div>
+
+                                        <div class="flex tres">
+                                        </div>
+                                    </div>
+
+                                    <section id="panelResultadosWrapper">
+
+
+                                        <div id="panelResultados"></div>
+                                    </section>
+                                    <section id="pnlReclamoDetalleWrapper">
+                                        <h3>Reclamo de cliente: <strong><span id="reclamo_num"></span></strong></h3>
+
+
+                                        <div class="flex-containerProducto pure-form encabezadoPDF">
+                                            <div class="flex leftC">
+                                                <p><strong>Cliente: </strong><span id="clienteEncabezado"></span></p>
+                                            </div>
+                                            <div class="flex rightC">
+                                                <p><strong>Fecha emisión: </strong><span id="fecha_emision"></span></p>
+
+
+                                            </div>
+                                            <div class="flex tres">
+                                                <p><strong>Fecha recepción: </strong><span id="fecha_recepcion"></span></p>
+
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div id="pnlReclamoDetalle"></div>
+                                    </section>
+
+                                    <div class="footer" id="firmas">
+                                        <div class="flex-containerProducto pure-form">
+                                            <div class="flex leftProduct" id="firmaAnalista">
+                                                <img src="../img/firmas/firmaMariaBravo.png" width="200" id="firmaMariaBravo"/>
+                                                <ul>
+                                                    <li>María Bravo</li>
+                                                    <li>Analista</li>
+                                                    
+                                                </ul>
+                                            </div>
+                                            <div class="flex rightProduct">
+                                                <img src="../img/firmas/firmaJorgeBelloccio.png" width="200" id="FirmaJorgeBellocchio" class="ocultarFirma"/>
+                                                <ul>
+                                                    <li>Jorge Bellocchio</li>
+                                                    <li>Gerente</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div> 
+
+
+
+
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><td class="style2"><strong></strong> </td></tr>
+                    </tfoot>
+                </table>
+            </div>
+
+
+
+
+
+            <div class="" id="notaPie">                    
+                <div id="pec">PEC-08-F03 Revisión 02 Agosto 2018</div>
+                <div id="plazo">Los dictámenes infundados estarán a disposición del cliente por un plazo de 30 días, en caso de no ser requeridos serán desechados.</div>
+            </div>
+        </div>
+
+        <div id="panelOK"></div>
+
+        <!--div id="myModal" class="reclamoDetalleModal">
+
+            
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+            </div>
+
+        </div !-->
+
+        <script src="../publico/librarys/moment.js"></script>
+        <script src="../publico/js/extras.js"></script>
+        <script src="../publico/js/mvc.js"></script>
+        <script src="../publico/js/sweetalert.min.js"></script>
+        <script src="../publico/js/notificaciones.js"></script>
+        <script src="../publico/js/reclamoBusqueda.js"></script>
+        <script>
+            ReclamoBusqueda.busquedaUltimos();
+        </script>
+        
+        
+
+    </body>  
+
+
+</html>

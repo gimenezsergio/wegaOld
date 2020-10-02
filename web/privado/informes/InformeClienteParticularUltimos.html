@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Listado Informe Cliente Particular</title>
+        <meta charset="UTF-8">
+        <link href="../../publico/css/themes/bigbox.css" rel="stylesheet"/>
+        <link href="../../publico/css/normalize.css" rel="stylesheet"/>
+        <link href="../../publico/css/pure.css" rel="stylesheet" />
+        <link href="../../publico/css/stylePrincipalGrid.css" rel="stylesheet" />
+        <link href="../../publico/css/informe.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="../../publico/css/informeClienteParticularPrint.css" rel="stylesheet" media="print" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .left{
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        </style>
+
+    </head>
+
+
+    <body> 
+        <div class="grid-container">
+            <div class="header">
+                <nav class="flexContainer">
+                    <ul class="nav flexItem flexStart">
+                        <li><a href="#">
+                                <img src="../../img/wega-logoOld.png" alt="Logo Wega" id="logo"/>
+                            </a></li>
+                    </ul>
+                    <ul class="nav flexContainer flexEnd">
+                        <li><a href="../principal.html" id="menu">MENU</a></li>
+                        <!--li><a href="">Productos</a></li>
+                        <li><a href="informes.html">Informes</a></li -->
+
+                    </ul>
+                </nav>
+            </div>
+            <div id="wrapperSearch" class="left">
+
+
+            </div>  
+            <div class="right">
+
+                <div class="flex-containerCliente pure-form">
+                    <div class="flex leftC">                        
+                        <button onclick="location.href = 'informeClienteParticular.html'" class='button-success pure-button' id="verReclaOProdudctos">Nuevo</button>
+                    </div>
+                    <div class="flex rightC">
+
+                    </div>
+
+                    <div class="flex tres">
+                    </div>
+                </div>
+
+                <section id="panelResultadosWrapper">
+
+
+                    <div id="panelResultados"></div>
+                </section>
+
+                <section id="templateInfParticualar">
+                    
+                    <div class="left">
+                        <div class="flex-containerCliente pure-form">
+                            <div class="flex leftC">  
+                                
+                            </div>
+                            <div class="flex rightC">
+
+                            </div>
+
+                            <div class="flex tres">
+                                <button class='button-success pure-button' id="verListadoInformes">Ver Listado</button>
+                            </div>
+                        </div>
+
+                        <h2>Informe Técnico Nº: <span id="idInforme"></span> </h2>
+                        <div class="flex-containerCliente pure-form">
+                            <div class="flex leftC">
+                                <p>Cliente:
+                                <strong><span id="clie_id"> </span> </strong>
+                                
+                                </p>
+                            </div>
+                            <div class="flex rightC">
+                                <p>
+                                    Motivo:
+                                <strong><span id="motivo"></span></strong>
+                                
+                                </p>
+                            </div>
+                            <div class="flex tres">
+                                <p>Fecha:
+                                <strong><span id="fecha"></span></strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex-containerCliente pure-form">
+                            <div class="flex leftC">
+                                <p>Producto:
+                                <strong><span id="producto"></span></strong>
+                                </p>
+
+                            </div>
+                            <div class="flex rightC">
+                                <p>Código:
+                                <strong><span id="codigo"></span></strong>
+                                </p>
+                            </div>
+                            <div class="flex tres">
+
+
+                                <div class="flex-containerProducto pure-form" id="cantidad_lote">
+                                    <div class="flex leftProduct">
+                                        <p>
+                                            Cantidad:
+                                        <strong><span id="cantidad"></span></strong>
+                                        </p>
+                                    </div>
+                                    <div class="flex rightProduct">
+                                        <p>
+                                            Lote:
+                                        <strong><span id="lote"></span></strong>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>  
+                    <div class="right">
+                        <div id="productPnl" class="pure-form">
+
+                            <article id="productItem" class="pure-form productItemContent product">
+
+                                <div class="flex-containerProducto pure-form flex">
+                                    <h3>Visual </h3>
+                                    <textarea name="visual" id="visual" rows="5" cols="40" readonly=""></textarea>
+                                </div>
+                                <div class="flex-containerProducto pure-form flex">
+                                    <h3>Observaciones </h3>
+                                    <textarea name="observacion" id="observaciones" rows="5" cols="40" readonly=""></textarea>
+                                </div>
+                                <div class="flex-containerProducto pure-form flex">
+                                    <h3>Análisis y ensayos </h3>
+                                    <textarea name="analisis_ensayos" id="analisis_ensayos" rows="5" cols="40" readonly=""></textarea>
+                                </div>
+                                <div class="flex-containerProducto pure-form flex">
+                                    <h3>Instrumentos y medios de control </h3>
+                                    <textarea name="inst_medios_control" id="inst_medios_control" rows="5" cols="40" readonly=""></textarea>
+                                </div>
+                                <div class="flex-containerProducto pure-form flex">
+                                    <h3>Conclusiones </h3>
+                                    <textarea name="conclusiones" id="conclusiones" rows="5" cols="40" readonly=""></textarea>
+                                </div>
+                                <div id="pnlFotos">
+                                    <img id="foto1" src=""/>
+                                </div>
+
+
+                            </article>
+
+                        </div>
+
+
+                    </div>
+                    <button id='btnPdf' class='button-success pure-button' onclick='InformeClienteParticular.pdf();'>PDF <i class='fa fa-file-pdf-o' aria-hidden='true'></i></button>
+                </section>
+
+
+
+            </div>
+
+            <div class="footer" id="firmas">
+
+
+
+                <div class="flex-containerProducto pure-form">
+                    <div class="flex leftProduct">
+
+
+                    </div>
+                    <div class="flex rightProduct">
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div>
+
+        </div>
+
+        <script src="../../publico/librarys/moment.js"></script>
+        <script src="../../publico/js/extras.js"></script>
+        <script src="../../publico/js/mvc.js"></script>
+        <script src="../../publico/js/sweetalert.min.js"></script>
+        <script src="../../publico/js/notificaciones.js"></script>
+        <script src="../../publico/js/informes/informeClienteParticular.js"></script>
+        <script>
+                            InformeClienteParticular.getUltimos();
+        </script>
+
+    </body>  
+
+
+</html>

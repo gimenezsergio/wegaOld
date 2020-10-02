@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sitema de reclamos de Wega - Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../publico/css/flatty.css" rel="stylesheet"/>
+        <link href="css/style-login.css" rel="stylesheet" type="text/css" media="all" />
+    </head>
+    <body>
+        <!-- main --> 
+        <div class="main-agileinfo slider ">
+            <div class="items-group">
+                <div class="item agileits-w3layouts" id="marco">
+                    <div class="block text main-agileits"> 
+                        <span class="circleLight"></span> 
+                        <!-- login form -->
+                        <div class="login-form loginw3-agile"> 
+                            <div class="agile-row">
+                                <img src="img/wega-logoOld.png" id="logo"/>
+                                <div class="login-agileits-top"> 	
+                <form class="form-signin" action="../LoginForm" method="post">
+                                        <p>Nombre de usuario</p>
+                                        <input type="text" id="inputUser" name="inputUser" class="" placeholder="Usuario" required autofocus value="">
+
+                                        <p>Clave</p>
+                                        <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Clave" required value="">
+
+                                        <label class="anim">
+
+                                            <span></span> 
+                                        </label>
+                                        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" id="btnVerificar" >Entrar</button>
+
+                                    </form> 	
+                                </div> 
+                                <div class="login-agileits-bottom wthree"> 
+                                    <!--h6><a href="#">Forgot password?</a></h6-->
+                                </div> 
+                            </div>  
+                        </div>   
+                    </div>
+
+                </div>   
+            </div>
+        </div>	 
+        <!-- //main --> 
+        <script src="../publico/js/humane.js"></script>
+        <script src="../publico/js/verificarAcceso.js"></script>
+        <script>
+            MiAcceso.init();
+        </script>
+    </body>
+</html>

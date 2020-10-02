@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Informe Técnico</title>
+        <meta charset="UTF-8">
+        <link href="../../publico/css/themes/bigbox.css" rel="stylesheet"/>
+        <link href="../../publico/css/normalize.css" rel="stylesheet"/>
+        <link href="../../publico/css/pure.css" rel="stylesheet" />
+        <link href="../../publico/css/stylePrincipalGrid.css" rel="stylesheet" />
+        <link href="../../publico/css/clienteParticular.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+
+    <body> 
+        <div class="grid-container">
+            <div class="header">
+                <nav class="flexContainer">
+                    <ul class="nav flexItem flexStart">
+                        <li><a href="#">
+                                <img src="../../img/wega-logoOld.png" alt="Logo Wega" id="logo"/>
+                            </a></li>
+                    </ul>
+                    <ul class="nav flexContainer flexEnd">
+                        <li><a href="../principal.html">MENU</a></li>
+                        <!--li><a href="">Productos</a></li>
+                        <li><a href="informes.html">Informes</a></li -->
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="left">
+                <div class="flex-containerCliente pure-form">
+                    <div class="flex leftC">                        
+                    </div>
+                    <div class="flex rightC">
+
+                    </div>
+
+                    <div class="flex tres">
+                        <button onclick="location.href = 'InformeClienteParticularUltimos.html'" class='button-success pure-button' id="verReclaOProdudctos">Ver Listado</button>
+                    </div>
+                </div>
+
+                <h2>Informe Técnico</h2>
+                <div class="flex-containerCliente pure-form">
+                    <div class="flex leftC">
+                        <label>Cliente</label>
+                        <input type="hidden" name="cliente" id="cliente"/>
+                        <div id="inputSelectCliente">
+                            <input list="clie" name="clie" id="clie_id"/>
+                        </div>
+                    </div>
+                    <div class="flex rightC">
+                        <label>Motivo </label>
+                        <input type="text" name="Motivo" id="motivo" placeholder="motivo" value="">
+                    </div>
+                    <div class="flex tres">
+                        <label>Fecha</label>
+                        <input  type="date" name="fecha" value="" id="fecha">
+                    </div>
+                </div>
+
+                <div class="flex-containerCliente pure-form">
+                    <div class="flex leftC">
+                        <label>Producto </label>
+                        <input type="hidden" name="producto" id="producto" />
+                        <span id="inputSelectProducto"></span>
+
+                    </div>
+                    <div class="flex rightC">
+                        <label>Código </label>
+                        <input type="text" name="Codigo" placeholder="Código" value="" id="codigo">
+                    </div>
+                    <div class="flex tres">
+
+
+                        <div class="flex-containerProducto pure-form" id="cantidad_lote">
+                            <div class="flex leftProduct">
+                                <label>Cantidad </label>
+                                <input type="number" min="0" name="cantidad" id="cantidad" placeholder="cant. total" value="0" size="3">
+                            </div>
+                            <div class="flex rightProduct">
+                                <label>Lote </label>
+
+                                <input type="text" name="lote" placeholder="lote" id="lote" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>  
+            <div class="right">
+                <div id="productPnl" class="pure-form">
+
+                    <article id="productItem" class="pure-form productItemContent product">
+                        <input type="hidden" name="reclamo_id" id="reclamo_id" value="" />
+                        <input type="hidden" name="producto_id" id="producto_id" value=""/>
+                        <input type="hidden" name="cliente_id" id="cliente_id" value=""/>
+
+                        <div class="flex-containerProducto pure-form flex">
+                            <h3>Visual </h3>
+                            <textarea name="visual" id="visual" rows="5" cols="40"></textarea>
+                        </div>
+                        <div class="flex-containerProducto pure-form flex">
+                            <h3>Observaciones </h3>
+                            <textarea name="observacion" id="observaciones" rows="5" cols="40"></textarea>
+                        </div>
+                        <div class="flex-containerProducto pure-form flex">
+                            <h3>Análisis y ensayos </h3>
+                            <textarea name="analisis_ensayos" id="analisis_ensayos" rows="5" cols="40"></textarea>
+                        </div>
+                        <div class="flex-containerProducto pure-form flex">
+                            <h3>Instrumentos y medios de control </h3>
+                            <textarea name="inst_medios_control" id="inst_medios_control" rows="5" cols="40"></textarea>
+                        </div>
+                        <div class="flex-containerProducto pure-form flex">
+                            <h3>Conclusiones </h3>
+                            <textarea name="conclusiones" id="conclusiones" rows="5" cols="40"></textarea>
+                        </div>
+
+
+                    </article>
+
+                </div>
+                <div id="buttons">
+                    <div class="flex-containerProducto pure-form flex">
+                        <input id="browse" type="file" onchange="Fotos.previewFiles();" multiple>
+                        <div id="preview"></div>
+                   
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="footer">
+                <div class="flex-containerProducto pure-form">
+                    <div class="flex leftC">
+                    </div>
+                    <div class="flex rightC">
+
+                    </div>
+                    <div class="flex tres">
+                        <button class="button-success pure-button" value="Nuevo reclamo"  id="grabar"> Grabar </button> 
+                        <button type="button" class="button-warning pure-button">Cancelar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="panelOK"></div>
+        <div id="paneljuego"></div>
+
+      
+        <script src="../../publico/librarys/moment.js"></script>
+        <script src="../../publico/js/reclamar.js"></script>
+        <script src="../../publico/js/mvc.js"></script>
+        <script src="../../publico/js/extras.js"></script>
+        <script src="../../publico/js/humane.js"></script>
+        <script src="../../publico/js/validate.js"></script>
+        <script src="../../publico/js/sweetalert.min.js"></script>
+        <script src="../../publico/js/notificaciones.js"></script>
+        <script src="../../publico/js/informes/informeClienteParticular.js"></script>
+        <script>
+            Mvc.getDatalist("cliente", "clientes", "#inputSelectCliente", " `<input list='elsector' name='elsector'/> <datalist name='clie' id='elsector'> ${result.map( result =>  ` <option value='${result.nombre}'>${result.nombre}</option> ` ).join('') } </datalist> `; ");
+            Mvc.getDatalist("producto", "productos", "#inputSelectProducto", " `<input list='id_prod' name='id_prod' data-value=''/> <datalist name='prot' id='id_prod'> ${result.map( result =>  ` <option data-value='${result.producto_id}' dato='${result.codigo_producto}' id='${result.producto_id}'>${result.codigo_producto}</option> ` ).join('') } </datalist> `; ");
+            InformeClienteParticular.setButton();
+        </script>
+    </body>  
+
+
+</html>

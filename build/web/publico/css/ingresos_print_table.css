@@ -1,0 +1,189 @@
+#cargaBtn, #btnInfGenericoPdf, #pnlInformeGenerico, body, #panelOpciones, h2, .flexEnd {
+    display: none;
+}
+body {
+    font-size: 10pt;
+}
+
+.modal-content {
+    width: 95%;
+    border: none;
+}
+
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.wrapper {
+    background-color: white;
+}
+
+#cargaEncabezado {
+    margin-bottom: 0px;
+}
+
+.modal {
+    background-color: white;
+    margin-top: 110px;
+}
+
+.retenidofalse, .no_retenido {
+    background-color: green;
+    color: white;
+    pointer-events: none;
+}
+
+* {
+    -webkit-print-color-adjust:exact;
+}
+
+
+nav {
+   display: none;
+}
+
+#detalleEncabezado{
+    width: 100%;
+    /*        margin-left: -85px;*/
+    /*margin-left: -13px;*/
+    text-align: justify; 
+}
+
+#detalleEncabezado {
+    /*    page-break-before:left;*/
+    /*    page-break-inside: avoid;*/
+}
+
+
+
+
+
+
+
+
+#firmas {
+    display: block;
+    width: 80%;
+    text-align: center;
+    font-size: 8pt;
+}
+
+#firmas > ul > li {
+    display: block;
+}
+
+
+#cuerpoPackagingAuxPrint {
+    display: block;    
+}
+
+
+#cuerpoPackaging {
+    display: none;    
+}
+
+.header {
+    display: block;
+}
+
+#logo {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 170px;
+}
+
+#titleInfGenerico {
+    font-size: 23pt;
+    display: block;
+    margin-top: -60px;
+}
+
+
+#printPdfDivisor {
+    position: absolute; 
+    right: 0px; 
+    top: 0px;
+    width: 120px; 
+    height: 90px;
+    border-left: 1px solid silver;
+    
+}
+
+#pec {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 9pt;
+    width: 70px;
+    text-align: center;
+}
+
+
+/*.pdfItemProduc {    
+    border: 1px solid red;
+    page-break-inside: avoid;
+    margin-top: 100px;
+}*/
+
+.pdfItemProduc div{    
+      page-break-after: always;
+}
+
+
+.header {
+    position: fixed;
+    top:0;
+}
+
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
+
+.header {
+    border: 1px solid silver;
+}
+
+.header-space {
+  height: 100px;
+  width: 98%;
+  /*background-color: blue;*/
+}
+
+.footer-space {
+  height: 10px;
+  width: 98%;
+  /*background-color: blue;*/
+}
+
+table {
+    margin-top: -100px;
+}
+
+
+.header, 
+.footer{
+  height: 90px;
+  width: 99.5%;
+/*  background-color: red;*/
+}
+
+
+.pdfItemProduc div {    
+      page-break-after: always;     
+}
+@page {
+    size: A4;
+    margin: 0.5cm;
+}
+
+/*@page :first {
+    size: A4;
+    margin: 0.5cm;
+}*/
+

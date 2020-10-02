@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Menu - Wega</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../publico/css/menu.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+         <h1 class="titulo"><img src="../img/wega-logoOld.png" alt="Logo Wega" id="logo"/> Postventa</h1>
+         
+
+        <div class="center-div">
+             
+            <div class='spacer spacer3x visible' id="principalPnl">
+                <h2>Prinicpal</h2>
+                <a href="javascript://" class='box grey' id="reclamosBtn">
+                    <i class="fa fa-sticky-note"></i>
+                    <h2>Reclamos</h2>
+                </a>
+                <a href="ingresos/precarga.html" class='box grey' id="ingresoBtn">
+                    <i class="fa fa-ship"></i>
+                    <h2>Ingresos</h2>
+                </a>
+                <a href="javascript://" class='box grey' id="laboratorioBtn">
+                    <i class="fa fa-flask"></i>
+                   
+                    <span class="icon-microscope">
+                
+                </span>
+                
+                    <h2>Laboratorio</h2>
+                </a>
+                <a href="javascript://" class='itemHalf grey' id="configurationBtn">
+                    <i class="fa fa-cog"></i>
+                    <h2>Configuración</h2>
+                </a>
+                
+                
+                <a href="#" class='itemHalf grey' id="exit">
+                    <form action="../Logout" method="GET" name="exit">
+                    <i class="fa fa-power-off"></i>
+                    <h2>Salir</h2>
+                    <button type="submit" form="exit" value="Submit" hidden="">Submit</button>
+                    </form>
+                </a>
+            </div>
+           
+            <div class='spacer spacer3x hide' id="reclamoPnl">
+                 <h2>Reclamo</h2>
+                <a href="reclamos.html" class='itemHalf grey'>
+                    <i class="fa fa-sticky-note"></i>
+                    <h2>Nuevo Reclamo</h2>
+                </a>
+                 
+                 <a href="clienteGenerico.html" class='itemHalf grey'>
+                    <i class="fa fa-area-chart"></i>
+                    <h2>Informe cliente generico</h2>
+                </a>
+                 
+                 <a href="busquedaReclamos.html" class='itemHalf grey'>
+                    <i class="fa fa-search"></i>
+                    <h2>Buscar reclamo</h2>
+                </a>
+                 
+                 <a href="informes/busquedaIndiceFallas.html" class='itemHalf grey'>
+                    <i class="fa fa-search"></i>
+                    <h2>Buscar Indice Falla</h2>
+                </a>
+                
+                
+                 <a href="informes/informeClienteParticular.html" class='itemHalf grey'>
+                    <i class="fa fa-area-chart"></i>
+                    <h2>Informe cliente particular</h2>
+                </a>
+                 <a href="informes/informeGerencial.html" class='itemHalf grey'>
+                    <i class="fa fa-sticky-note"></i>
+                    <h2>Informe interno</h2>
+                </a>
+               <a href="javascript://" class='box grey' id="principalBtn2">
+                    <i class="fa fa-home"></i>
+                    <h2>Menu Principal</h2>
+                </a>
+            </div>
+            
+            
+            <!-- Menu configuration -->
+            <div class='spacer spacer3x hide' id="confPnl">
+                <h2>Configuración</h2>
+                <a href="abm/cliente.html" class='itemHalf grey'>
+                    <i class="fa fa-address-book"></i>
+                    <h2>Clientes</h2>
+                </a>
+                <a href="abm/proveedores.html" class='itemHalf grey'>
+                    <i class="fa fa-users"></i>
+                    <h2>Proveedores</h2>
+                </a>
+                
+                <a href="abm/productos.html" class='itemHalf grey'>
+                    <i class="fa fa-reorder"></i>
+                    <h2>Productos</h2>
+                </a>
+                <a href="abm/familias.html" class='itemHalf grey'>
+                    <i class="fa fa-outdent"></i>
+                    <h2>Familias</h2>
+                </a>
+                <a href="abm/productosFamilias.html" class='itemHalf grey'>
+                    <i class="fa fa-compress                "></i>
+                    <h2>Familia y productos</h2>
+                </a>
+                
+                <a href="abm/diseno.html" class='itemHalf grey'>
+                    <i class="fa fa-pencil"></i>
+                    <h2>Diseño</h2>
+                </a>
+                <a href="abm/proceso.html" class='itemHalf grey'>
+                    <i class="fa fa-cog"></i>
+                    <h2>Proceso</h2>
+                </a>
+                <a href="abm/falla_material.html" class='itemHalf grey'>
+                    <i class="fa fa-close"></i>
+                    <h2>Falla de Material</h2>
+                </a>
+                
+                
+                <a href="javascript://" class='box grey' id="principalBtn1">
+                    <i class="fa fa-home"></i>
+                    <h2>Menu Principal</h2>
+                </a>
+                
+                
+            </div>
+            <div class='spacer spacer3x hide' id="ingresosPnl">
+                <!--h2>Ingreso</h2>
+                <a href="ingresos/precarga.html" class='itemHalf grey'>
+                    <i class="fa fa-check-square"></i>
+                    <h2>Precarga</h2>
+                </a>
+                <a href="ingresos/carga.html" class='itemHalf grey'>
+                    <i class="fa fa-check-square-o"></i>
+                    <h2>Carga</h2>
+                </a>
+                <a href="ingresos/planDeControl.html" class='itemHalf grey'>
+                    <i class="fa fa-file-text-o"></i>
+                    <h2>Plan de Control</h2>
+                </a>
+                <a href="javascript://" class='itemHalf grey'>
+                    <i class="fa fa-area-chart"></i>
+                    <h2>Reporte Genérico</h2>
+                </a>
+                <a href="javascript://" class='itemHalf grey'>
+                    <i class="fa fa-area-chart"></i>
+                    <h2>Reporte Técnico</h2>
+                </a>
+                <a href="javascript://" class='itemHalf grey' id="principalBtn3">
+                    <i class="fa fa-home"></i>
+                    <h2>Menu Principal</h2>
+                </a -->
+            </div>
+            <div class='spacer spacer3x hide' id="labPnl">
+                <h2>Laboratorio</h2>
+                <a href="javascript://" class='box grey'>
+                    <i class="fa fa-circle"></i>
+                    <h2>Opcion 1</h2>
+                </a>
+                <a href="productos.html" class='box grey'>
+                    <i class="fa fa-circle"></i>
+                    <h2>Opcion 2</h2>
+                </a>
+                <a href="javascript://" class='box grey' id="principalBtn4">
+                    <i class="fa fa-home"></i>
+                    <h2>Menu Principal</h2>
+                </a>
+            </div>
+            
+            
+        </div>
+        <script src="../publico/js/verificarAcceso.js"></script>
+        <script src="../publico/js/menu.js"></script>
+        <script>
+            miMenu.toSubMenu();
+            MiAcceso.exitSystemBtn();
+        </script>
+    </body>
+</html>
